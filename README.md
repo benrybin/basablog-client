@@ -2,6 +2,19 @@
 
 Blog Application
 
+Objective - to create an implementation of a small web service
+
+Purpose - to demonstrate the construction of a full-stacked web-application
+
+Developmental Notes
+
+    Minimum Tech Stack
+    Wireframe - Mockflow
+    Frontend - Angular / React
+    Business Logic - Java
+    Data Layer - MySQL
+    Cloud - Heroku
+
 User Stories to Fulfill
 
     I can make a user account
