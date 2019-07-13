@@ -17,12 +17,17 @@ public class BlogApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BlogApplication.class, args);
+
 	}
 	@Bean
 	public CommandLineRunner demo(UserRepository repository) {
 		return (args) -> {
 			// save a couple of customers
-			repository.save(new Users("asfffffffffffffdfasdf", "afffffffffgwrtg", "asdf"));
+			repository.save(new Users("Jack", "Bauer", "asdf"));
+			repository.save(new Users("Chloe", "O'Brian", "asdf"));
+			repository.save(new Users("Kim", "Bauer", "asdf"));
+			repository.save(new Users("David", "Palmer", "asdf"));
+			repository.save(new Users("Michelle", "Dessler", "asdf"));
 
 			// fetch all customers
 			log.info("Customers found with findAll():");
