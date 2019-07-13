@@ -9,7 +9,7 @@ import { PostsComponent } from './posts/posts.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TagsComponent
+    TagsComponent,
     PostsComponent
   ],
   imports: [
