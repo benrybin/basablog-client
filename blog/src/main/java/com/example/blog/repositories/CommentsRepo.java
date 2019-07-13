@@ -1,11 +1,11 @@
 package com.example.blog.repositories;
 
-import com.example.blog.entities.Users;
+import com.example.blog.entities.Comments;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
 @Repository
-public interface UserRepository extends CrudRepository<Users, Integer>{
+public interface CommentsRepo extends CrudRepository <Comments,Long> {
+
 }
