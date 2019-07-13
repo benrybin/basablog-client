@@ -1,6 +1,5 @@
 package com.example.blog.entities;
 import javax.persistence.*;
-import javax.sql.DataSource;
 
 @Entity
 public class Users {

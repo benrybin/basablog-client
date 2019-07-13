@@ -13,18 +13,18 @@ class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping(path="/add")
-    public @ResponseBody String addNewUser(@RequestParam Integer id, @RequestParam String username, @RequestParam String password, @RequestParam String email){
+    @GetMapping(path="users/add")
+    public @ResponseBody String addNewUser(@RequestParam Integer id, @RequestParam String username, @RequestParam String password, @RequestParam String emailAddress){
         Users n = new Users();
         n.setId(id);
         n.setUsername(username);
         n.setPassword(password);
-        n.setEmailAddress(email);
+        n.setEmailAddress(emailAddress);
         userRepository.save(n);
         return "Saved";
     }
 
-    @GetMapping(path="/all")
+    @GetMapping(path="users/all")
     public @ResponseBody Iterable<Users> getAllUsers(){
         return userRepository.findAll();
     }
