@@ -1,4 +1,4 @@
-package com.example.blog;
+package com.example.blog.entities;
 import javax.persistence.*;
 import javax.sql.DataSource;
 
@@ -44,7 +44,7 @@ public class Users {
         this.password = password;
     }
 
-    protected Users(){}
+    public Users(){}
 
     public Users(String username, String emailAddress, String password){
         this.username = username;

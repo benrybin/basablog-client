@@ -1,5 +1,7 @@
 package com.example.blog;
 
+import com.example.blog.entities.Users;
+import com.example.blog.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
