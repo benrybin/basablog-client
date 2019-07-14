@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post'
 import { POSTS } from '../mock-posts'
 
+
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -19,6 +20,13 @@ export class PostsComponent implements OnInit {
 
   onSelect(post: Post): void {
     this.selectedPost = post;
+  }
+
+  showPost() {
+    this.postService.getPost()
+    .subscribe((data : Post)) => this.post = {
+      postsUrl: data['post']
+    }
   }
 
 }

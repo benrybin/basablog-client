@@ -8,6 +8,8 @@ import { TagsComponent } from './tags/tags.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostcommentsComponent } from './postcomments/postcomments.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { PostDetailsComponent } from './post-details/post-details.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule
   ],
