@@ -8,6 +8,7 @@ import { TagsComponent } from './tags/tags.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostcommentsComponent } from './postcomments/postcomments.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { CommentsListComponent } from './comments-list/comments-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PostDetailsComponent } from './post-details/post-details.component';
     TagsComponent,
     PostsComponent,
     PostcommentsComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    CommentsListComponent
   ],
   imports: [
     BrowserModule,
