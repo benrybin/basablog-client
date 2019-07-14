@@ -1,6 +1,6 @@
 import { Comment } from './comment';
 
-describe('Comments', () => {
+describe('Comment', () => {
   it('should create an instance', () => {
     expect(new Comment()).toBeTruthy();
   });
