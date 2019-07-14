@@ -23,11 +23,11 @@ export class PostsComponent implements OnInit {
     this.selectedPost = post;
   }
 
-  showPost() {
-    this.postService.getPost()
-    .subscribe((data : Post)) => this.post = {
-      postsUrl: data['post']
-    }
-  }
+  // showPost() {
+  //   this.postService.getPost()
+  //   .subscribe((data : Post)) => this.post = {
+  //     postsUrl: data['post']
+  //   }
+  // }
 
 }
