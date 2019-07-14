@@ -14,7 +14,7 @@ public class CommentsController {
     @Autowired
     private CommentsRepo commentsRepo;
 
-    @GetMapping(path="/add")
+    @GetMapping(path="comments/add")
     public @ResponseBody
     String addNewComment(@RequestParam String body, @RequestParam Integer userid, @RequestParam Integer postid){
         Comments n = new Comments(body,userid,postid);
@@ -23,7 +23,7 @@ public class CommentsController {
         return "Saved";
     }
 
-    @GetMapping(path="/all")
+    @GetMapping(path="comments/all")
     public @ResponseBody Iterable<Comments> getAllUsers(){
         return commentsRepo.findAll();
     }

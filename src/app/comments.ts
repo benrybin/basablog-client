@@ -1,7 +1,7 @@
-export class Post {
+export class Comments {
     id: number;
-    title: string;
+    body: string;
     postText : string;
-    imageURL : string;
+    postid: number;
     userId : number;
 }
