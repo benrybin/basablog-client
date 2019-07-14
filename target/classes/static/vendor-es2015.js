@@ -172,7 +172,7 @@ const LOCATION_INITIALIZED = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inj
  * Angular provides two strategies:
  * `HashLocationStrategy` and `PathLocationStrategy`.
  *
- * Applications should use the `Router` or `Location` services to
+ * Applications should use the `Router` or `Location` com.example.unzip.services to
  * interact with application route state.
  *
  * For instance, `HashLocationStrategy` produces URLs like
@@ -12346,7 +12346,7 @@ const _ESCAPED_CHARS = [
     [/</g, '&lt;'],
     [/>/g, '&gt;'],
 ];
-// Escape `_ESCAPED_CHARS` characters in the given text with encoded entities
+// Escape `_ESCAPED_CHARS` characters in the given text with encoded com.example.unzip.entities
 function escapeXml(text) {
     return _ESCAPED_CHARS.reduce((text, entry) => text.replace(entry[0], entry[1]), text);
 }
@@ -12840,7 +12840,7 @@ function getQueryPredicate(query, constantPool) {
         query.predicate.forEach((selector) => {
             // Each item in predicates array may contain strings with comma-separated refs
             // (for ex. 'ref, ref1, ..., refN'), thus we extract individual refs and store them
-            // as separate array entities
+            // as separate array com.example.unzip.entities
             const selectors = selector.split(',').map(token => literal(token.trim()));
             predicate.push(...selectors);
         });
@@ -34324,7 +34324,7 @@ class R3TargetBinder {
         //     them. TODO(alxhub): handle multiple directives claiming an input/output/etc.
         //   - references: Map of #references to their targets.
         const { directives, bindings, references } = DirectiveBinder.apply(target.template, this.directiveMatcher);
-        // Finally, run the TemplateBinder to bind references, variables, and other entities within the
+        // Finally, run the TemplateBinder to bind references, variables, and other com.example.unzip.entities within the
         // template. This extracts all the metadata that doesn't depend on directive matching.
         const { expressions, symbols, nestingLevel, usedPipes } = TemplateBinder.apply(target.template, scope);
         return new R3BoundTarget(target, directives, bindings, references, expressions, symbols, nestingLevel, usedPipes);
@@ -34333,7 +34333,7 @@ class R3TargetBinder {
 /**
  * Represents a binding scope within a template.
  *
- * Any variables, references, or other named entities declared within the template will
+ * Any variables, references, or other named com.example.unzip.entities declared within the template will
  * be captured and available by name in `namedEntities`. Additionally, child templates will
  * be analyzed and have their child `Scope`s available in `childScopes`.
  */
@@ -41644,9 +41644,9 @@ function isDOMParserAvailable() {
  *     (before port).
  *
  * The pattern disallows &, used in HTML entity declarations before
- * one of the characters in [/?#]. This disallows HTML entities used in the
+ * one of the characters in [/?#]. This disallows HTML com.example.unzip.entities used in the
  * protocol name, which should never happen, e.g. "h&#116;tp" for "http".
- * It also disallows HTML entities in the first path part of a relative path,
+ * It also disallows HTML com.example.unzip.entities in the first path part of a relative path,
  * e.g. "foo&lt;bar/baz".  Our existing escaping functions should not produce
  * that. More importantly, it disallows masking of a colon,
  * e.g. "javascript&#58;...".
@@ -62875,7 +62875,7 @@ function createPipeInstance(view, def) {
     while (compView.parent && !isComponentView(compView)) {
         compView = compView.parent;
     }
-    // pipes can see the private services of the component
+    // pipes can see the private com.example.unzip.services of the component
     /** @type {?} */
     const allowPrivateServices = true;
     // pipes are always eager and classes!
@@ -62887,7 +62887,7 @@ function createPipeInstance(view, def) {
  * @return {?}
  */
 function createDirectiveInstance(view, def) {
-    // components can see other private services, other directives can't.
+    // components can see other private com.example.unzip.services, other directives can't.
     /** @type {?} */
     const allowPrivateServices = (def.flags & 32768 /* Component */) > 0;
     // directives are always eager and classes!
@@ -63041,7 +63041,7 @@ function checkAndUpdateDirectiveDynamic(view, def, values) {
  * @return {?}
  */
 function _createProviderInstance$1(view, def) {
-    // private services can see other private services
+    // private com.example.unzip.services can see other private com.example.unzip.services
     /** @type {?} */
     const allowPrivateServices = (def.flags & 8192 /* PrivateProvider */) > 0;
     /** @type {?} */
@@ -69514,7 +69514,7 @@ class NoopNgZone {
  */
 /**
  * The Testability service provides testing hooks that can be accessed from
- * the browser and by services such as Protractor. Each bootstrapped Angular
+ * the browser and by com.example.unzip.services such as Protractor. Each bootstrapped Angular
  * application on the page will have an instance of Testability.
  * \@publicApi
  */
@@ -70036,7 +70036,7 @@ function getPlatform() {
 }
 /**
  * The Angular platform is the entry point for Angular on a web page. Each page
- * has exactly one platform, and services (such as reflection) which are common
+ * has exactly one platform, and com.example.unzip.services (such as reflection) which are common
  * to every Angular application running on the page are bound in its scope.
  *
  * A page's platform is initialized implicitly when a platform is created via a platform factory
