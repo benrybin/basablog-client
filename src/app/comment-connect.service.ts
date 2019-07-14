@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Comment} from 'src/app/comments'
+import {Comment} from 'src/app/comment'
 import { Observable} from 'rxjs'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 

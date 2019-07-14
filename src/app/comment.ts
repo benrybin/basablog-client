@@ -4,4 +4,6 @@ export class Comment {
     postText : string;
     postid: number;
     userId : number;
+    constructor(){};
 }
+
