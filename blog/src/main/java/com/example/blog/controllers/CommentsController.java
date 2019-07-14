@@ -6,15 +6,17 @@ import com.example.blog.repositories.CommentsRepo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
+@CrossOrigin
 public class CommentsController {
     @Autowired
     private CommentsRepo commentsRepo;
 
-    @GetMapping(path="comments/add")
+    @GetMapping(path="/comments/add")
     public @ResponseBody
     String addNewComment(@RequestParam String body, @RequestParam Integer userid, @RequestParam Integer postid){
         Comments n = new Comments(body,userid,postid);
@@ -23,7 +25,7 @@ public class CommentsController {
         return "Saved";
     }
 
-    @GetMapping(path="comments/all")
+    @GetMapping(path="/comments/all")
     public @ResponseBody Iterable<Comments> getAllUsers(){
         return commentsRepo.findAll();
     }
