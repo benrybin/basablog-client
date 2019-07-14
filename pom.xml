@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>newblog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>newblog</name>
+	<name>unzip</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

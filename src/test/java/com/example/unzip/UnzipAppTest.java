@@ -1,4 +1,4 @@
-package com.example.newblog;
+package com.example.unzip;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class NewblogApplicationTests {
+public class UnzipAppTest {
 
 	@Test
 	public void contextLoads() {

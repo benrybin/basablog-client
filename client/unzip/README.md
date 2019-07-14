@@ -1,27 +1,34 @@
 # Unzip
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+Blog Application
 
-## Development server
+Objective - to create an implementation of a small web service
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Purpose - to demonstrate the construction of a full-stacked web-application
 
-## Code scaffolding
+Developmental Notes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Minimum Tech Stack
+    Wireframe - Mockflow
+    Frontend - Angular / React
+    Business Logic - Java
+    Data Layer - MySQL
+    Cloud - Heroku
 
+User Stories to Fulfill
+
+    I can make a user account
+    I can login to an account
+    I can logout of an account
+    while logged in, I can create new blog posts
+    A blog post can consist of images and text
+    I can view list of all blog posts
+    I can view blog posts filtered by blog-tag
+    I can select between static tags
+    I can view new blog posts upon refreshing the DOM
+    I can post comments on a blog post
+    
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

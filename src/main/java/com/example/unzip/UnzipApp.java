@@ -1,13 +1,13 @@
-package com.example.newblog;
+package com.example.unzip;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NewblogApplication {
+public class UnzipApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NewblogApplication.class, args);
+		SpringApplication.run(UnzipApp.class, args);
 	}
 
 }
