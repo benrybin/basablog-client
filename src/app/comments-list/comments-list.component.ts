@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CommentConnectService} from 'src/app/comment-connect.service';
-import {Comment} from 'src/app/comments';
+import {Comment} from 'src/app/comment';
 
 
 @Component({
