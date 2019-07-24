@@ -1,7 +1,7 @@
 export class Comment {
     id: number;
     body: string;
-    postid: number;
+    postId: number;
     userId : number;
 
     constructor() {}
