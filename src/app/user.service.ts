@@ -3,6 +3,7 @@ import {User} from './user';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {NgModel} from "@angular/forms";
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class UserService {
   private verifyUrl: string;
 
   constructor(private http: HttpClient) {
-    this.userUrl = 'http://localhost:8080/users/add';
-    this.verifyUrl = 'http://localhost:8080/users/verify';
+    this.userUrl = environment.apiUrl + 'users/add';
+    this.verifyUrl = environment.apiUrl + 'users/verify';
   }
   public save(user: User) {
     return this.http.post<User>(this.userUrl, user);

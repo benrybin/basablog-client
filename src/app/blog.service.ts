@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Post} from 'src/app/post';
-import {Comment} from 'src/app/comment';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BlogService {
-  private blogposturl = "http://localhost:8080/blogPost/add";
-  private bloggeturl =  "http://localhost:8080/blogPost/all";
-
+  private blogposturl = environment.apiUrl + "blogPost/add";
+  private bloggeturl =  environment.apiUrl + "blogPost/all";
+  private postgeturl = environment.apiUrl + "blogPost/";
 
   constructor(private http:HttpClient) {}
 
@@ -19,7 +19,7 @@ export class BlogService {
   }
 
   public getBlogPost(id : number): Observable<Post> {
-    return this.http.get<Post>(`http://localhost:8080/blogPost/${id}`);
+    return this.http.get<Post>(this.postgeturl + id);
   }
   
   public save(post: Post){
