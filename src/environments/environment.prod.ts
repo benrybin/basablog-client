@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://basablog.herokuapp.com/'
+  apiUrl: 'https://basablog-server.herokuapp.com/'
 };
