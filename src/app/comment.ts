@@ -1,9 +1,11 @@
 export class Comment {
     id: number;
     body: string;
-    postId: number;
-    userId : number;
+    postid: number;
+    userid : number;
 
-    constructor() {}
+
+    constructor() {
+    }
 
 }
