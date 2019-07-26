@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BlogService} from 'src/app/blog.service';
 import {Post} from 'src/app/post';
 import {Comment} from 'src/app/comment';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bloglist',
@@ -11,7 +12,9 @@ import {Comment} from 'src/app/comment';
 export class BloglistComponent implements OnInit {
   posts: Post[];
 
-  constructor(private blogService: BlogService) {
+  constructor(private blogService: BlogService,
+    private route: ActivatedRoute
+    ) {
   }
   ngOnInit() {
     this.getBlogPosts();
@@ -19,6 +22,12 @@ export class BloglistComponent implements OnInit {
 
   getBlogPosts(): void {
     this.blogService.findAllBlogPost()
+    .subscribe(posts => this.posts = posts);
+  }
+
+  getBlogPostsByTag(): void {
+
+    this.blogService.findAllBlogPostByTag1('tag')
     .subscribe(posts => this.posts = posts);
   }
 }
