@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'post/:id',
     component: BlogComponent
+  },
+  {
+    path: 'posts/:tag',
+    component: BloglistComponent
   }
 
 ];
