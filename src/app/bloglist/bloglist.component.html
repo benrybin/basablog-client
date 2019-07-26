@@ -12,4 +12,16 @@
         </a>
     </div>
 </div>
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    View Posts by Tag
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" (click)="getBlogPostsByTag('Java')" type="button">Java</button>
+    <button class="dropdown-item" type="button">Funny cuz its true</button>
+    <button class="dropdown-item" type="button">Funny cuz its sad</button>
+    <button class="dropdown-item" type="button">Funny</button>
+    <button class="dropdown-item" type="button">Puppy</button>
+  </div>
+</div>
     
