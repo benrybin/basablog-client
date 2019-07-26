@@ -27,8 +27,13 @@ export class BloglistComponent implements OnInit {
 
   getBlogPostsByTag(): void {
 
-    this.blogService.findAllBlogPostByTag1('tag')
-    .subscribe(posts => this.posts = posts);
+    this.blogService.findAllBlogPostByTag1('Funny')
+    .subscribe(posts => 
+      {
+        console.log(posts);
+        this.posts = posts;
+      }
+    );
   }
 }
 
