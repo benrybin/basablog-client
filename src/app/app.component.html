@@ -26,12 +26,18 @@
         </li> -->
         <!-- Example split danger button -->
       </ul>
-
+      <div>
+          <span class="btn-group" >
+            <button *ngIf="!loginstatus" class="btn btn-danger" type="button" routerLink='user'>Login</button>
+          </span>
+          </div>
+         <!-- <app-user [hidden]="loginstatus" (userstatus)="userstatuschange($event)"></app-user> -->
+  
 
      
     </div>
   </nav>
 </div>
-
-<app-user [hidden]="loginstatus" (userstatus)="userstatuschange($event)"></app-user>
+<!-- 
+<app-user [hidden]="loginstatus" (userstatus)="userstatuschange($event)"></app-user> -->
 <router-outlet></router-outlet>
