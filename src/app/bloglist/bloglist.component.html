@@ -12,8 +12,9 @@
   </div>
 </div>
 
-<div class="card text-center"style="width: 40rem; margin:0 auto;">
-    <div class="card border-danger " style="max-width: 40rem;">
+<div class="card text-center "style="width: 40rem; margin:0 auto;">
+    <div class="card border-danger " style="max-width: 40rem; margin-bottom: 0;">
+      
       <a *ngFor="let post of posts" routerLink="/post/{{post.id}}">
         <div class="module blog">
           <img class="card-img-top" src="{{post.imageURL || 'https://www.tigers-world.com/wp-content/uploads/Siberian_tiger-1.jpg' }}"  alt="post image">
@@ -21,10 +22,13 @@
             <h5 class="card-title">{{post.title}}</h5>
             <p class="card-text">{{post.postText}}</p>
             <h3 class="card-title">{{post.userId}}</h3>
+           
           </div>
         </div>
         </a>
+      
     </div>
 </div>
+
 
     
