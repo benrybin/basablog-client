@@ -17,11 +17,16 @@ export class BloglistComponent implements OnInit {
     ) {
   }
   ngOnInit() {
-    this.getBlogPosts();
+    this.getBlogPostsDesc();
   }
 
   getBlogPosts(): void {
     this.blogService.findAllBlogPost()
+    .subscribe(posts => this.posts = posts);
+  }
+
+  getBlogPostsDesc(): void {
+    this.blogService.findAllBlogPostsDesc()
     .subscribe(posts => this.posts = posts);
   }
 
