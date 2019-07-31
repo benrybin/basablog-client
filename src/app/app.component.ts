@@ -7,7 +7,7 @@ import { User } from 'src/app/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loginstatus = false;
+  loginstatus = true;
   title = 'unZip';
 
   userstatuschange(value: boolean) {
