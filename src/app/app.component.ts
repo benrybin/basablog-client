@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit, Input} from '@angular/core';
 import { User } from 'src/app/user';
 import {CookieService} from "ngx-cookie-service";
 import { BlogService } from './blog.service';
@@ -8,18 +8,24 @@ import { BlogService } from './blog.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  cookservice:CookieService;
+export class AppComponent implements OnInit {
+  
   loginstatus = false;
   title = 'unZip';
-  cookieStatus:string;
+  
   blogService : BlogService;
+  constructor( private cookservice: CookieService ) { }
+  ngOnInit(){
+    
+    
 
+  }
   userstatuschange(): boolean{
-    this.cookieStatus=this.cookservice.get("name");
-    if(this.cookieStatus==="test2"){
-      return true
+    if(!this.cookservice.check("name")){return false}
+    if(this.cookservice.get("name")==="test2"){
+      this.loginstatus=true;
     }
+    
   }
 
   getLoggedInStatus(): boolean {
