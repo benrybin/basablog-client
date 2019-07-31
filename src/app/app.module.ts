@@ -12,6 +12,7 @@ import { AdduserComponent } from './adduser/adduser.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { AddcommentComponent } from './addcomment/addcomment.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AddcommentComponent } from './addcomment/addcomment.component';
     BlogComponent,
     CommentComponent,
     AdduserComponent,
-    AddcommentComponent
+    AddcommentComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
