@@ -4,6 +4,7 @@ import {Post} from 'src/app/post';
 import {Comment} from 'src/app/comment';
 import { FilterPipe } from '../filter.pipe';
 import { ActivatedRoute } from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-bloglist',
