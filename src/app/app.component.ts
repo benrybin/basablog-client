@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/user';
+import {CookieService} from "ngx-cookie-service";
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,16 @@ import { User } from 'src/app/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loginstatus = true;
+  cookservice:CookieService;
+  loginstatus = false;
   title = 'unZip';
+  cookieStatus:string;
 
-  userstatuschange(value: boolean) {
-    this.loginstatus = value;
+  userstatuschange(): boolean{
+    this.cookieStatus=this.cookservice.get("name");
+    if(this.cookieStatus==="test2"){
+      return true
+    }
   }
 
   getLoggedInStatus(): boolean {

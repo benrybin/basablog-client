@@ -23,16 +23,18 @@
       </ul>
       <div>
           <span class="btn-group" >
-            <button *ngIf="!loginstatus" class="btn btn-danger" type="button" routerLink='user'>Login</button>
+            <button *ngIf="userstatuschange()" class="btn btn-danger" type="button" routerLink='user'>Login</button>
           </span>
           </div>
-         <!-- <app-user [hidden]="loginstatus" (userstatus)="userstatuschange($event)"></app-user> -->
+         
   
 
      
     </div>
   </nav>
 </div>
+
 <!-- 
 <app-user [hidden]="loginstatus" (userstatus)="userstatuschange($event)"></app-user> -->
 <router-outlet></router-outlet>
+<app-user (userstatus)="userstatuschange()"></app-user> 
