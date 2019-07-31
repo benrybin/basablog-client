@@ -13,6 +13,7 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AddcommentComponent } from './addcomment/addcomment.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AddcommentComponent } from './addcomment/addcomment.component';
     BlogComponent,
     CommentComponent,
     AdduserComponent,
-    AddcommentComponent
+    AddcommentComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

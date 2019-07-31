@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/user';
+import { BlogService } from './blog.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,9 @@ import { User } from 'src/app/user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loginstatus = true;
+  loginstatus = false;
   title = 'unZip';
+  blogService : BlogService;
 
   userstatuschange(value: boolean) {
     this.loginstatus = value;
@@ -16,5 +18,9 @@ export class AppComponent {
 
   getLoggedInStatus(): boolean {
     return this.loginstatus;
+  }
+
+  goHome() : void {
+    this.blogService.findAllBlogPostsDesc;
   }
 }
