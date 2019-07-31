@@ -23,6 +23,6 @@ export class UserComponent implements OnInit {
   }
 
   verify() {
-    return this.router.navigate(['users/verify']);
+    return this.router.navigate(['']);
   }
 }

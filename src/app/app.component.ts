@@ -8,7 +8,7 @@ import { BlogService } from './blog.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loginstatus = true;
+  loginstatus = false;
   title = 'unZip';
   blogService : BlogService;
 

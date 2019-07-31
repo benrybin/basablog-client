@@ -21,13 +21,13 @@
         </li>
         </div>
       </ul>
-      <div>
-          <span class="btn-group" >
-            <button *ngIf="!loginstatus" class="btn btn-danger" type="button" routerLink='user'>Login</button>
-          </span>
-          </div>
-       
     </div>
+      <div>
+          <span class="btn-group">
+            <button *ngIf="!loginstatus" class="btn btn-danger" type="button" routerLink='user'>Login</button>
+              <button *ngIf="loginstatus" class="btn btn-danger" type="button" routerLink=''>Logout</button>
+          </span>
+        </div>
   </nav>
 </div>
 
