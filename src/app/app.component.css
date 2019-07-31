@@ -8,6 +8,7 @@ h1 {
 a {
     text-decoration-color: black;
     color: black;
+    text-decoration-line: none;
 }
 
 
