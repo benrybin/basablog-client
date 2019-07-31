@@ -25,5 +25,12 @@ export class BlogService {
   public save(post: Post){
     return this.http.post<Post>(this.blogposturl,post);
   }
- 
+
+  public findAllBlogPostByTag1(tag1: string): Observable<Post[]>{
+    return this.http.get<Post[]>(this.postgeturl + "all/" + tag1);
+  }
+
+  public findAllBlogPostsDesc(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.bloggeturl + "/reverse");
+  }
 }

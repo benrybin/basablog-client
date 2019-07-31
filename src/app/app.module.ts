@@ -9,8 +9,9 @@ import { UserComponent } from './user/user.component';
 import { BlogComponent } from './blog/blog.component';
 import { CommentComponent } from './comment/comment.component';
 import { AdduserComponent } from './adduser/adduser.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AddcommentComponent } from './addcomment/addcomment.component';
 import { FilterPipe } from './filter.pipe';
 
@@ -32,9 +33,12 @@ import { FilterPipe } from './filter.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpErrorInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
