@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/user';
 import {CookieService} from "ngx-cookie-service";
+import { BlogService } from './blog.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ export class AppComponent {
   loginstatus = false;
   title = 'unZip';
   cookieStatus:string;
+  blogService : BlogService;
 
   userstatuschange(): boolean{
     this.cookieStatus=this.cookservice.get("name");
@@ -22,5 +24,9 @@ export class AppComponent {
 
   getLoggedInStatus(): boolean {
     return this.loginstatus;
+  }
+
+  goHome() : void {
+    this.blogService.findAllBlogPostsDesc;
   }
 }
