@@ -17,3 +17,7 @@ a {
 .alignright {
     float: right;
 }
+.btn {
+    outline-color: aqua;
+    background-color: #87CEEB;
+}
