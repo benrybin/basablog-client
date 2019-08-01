@@ -46,9 +46,11 @@ export class BloglistComponent implements OnInit {
   }
 
   getBlogSummary(post : Post): string {
-    let summary : string = '';
-    this.blogService.findSummary(post.id).subscribe(text => summary = text);
-    return summary;
+    const p : RegExp = /[.?!]/;
+    const sentences : string[] = post.postText.split(p);
+    if (sentences.length < 1) return post.postText;
+    return sentences[0];
+    
   }
 }
 
