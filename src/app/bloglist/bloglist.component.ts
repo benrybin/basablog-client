@@ -4,6 +4,7 @@ import {Post} from 'src/app/post';
 import {Comment} from 'src/app/comment';
 import { FilterPipe } from '../filter.pipe';
 import { ActivatedRoute } from '@angular/router';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -42,6 +43,12 @@ export class BloglistComponent implements OnInit {
         this.posts = posts;
       }
     );
+  }
+
+  getBlogSummary(post : Post): string {
+    let summary : string = '';
+    this.blogService.findSummary(post.id).subscribe(text => summary = text);
+    return summary;
   }
 }
 

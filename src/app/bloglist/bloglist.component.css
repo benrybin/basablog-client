@@ -3,3 +3,21 @@ a {
     color: black;
     text-decoration-line: none;
 }
+.card-header {
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.card-body {
+    font-family: 'Montserrat', sans-serif;
+}
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+.btn btn-info dropdown-toggle {
+	background-color: 	#778899;
+	border-color: #000;
+}

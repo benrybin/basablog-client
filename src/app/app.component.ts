@@ -11,7 +11,7 @@ import { BlogService } from './blog.service';
 export class AppComponent implements OnInit {
   
   loginstatus = false;
-  title = 'unZip';
+  title = 'ZipShare';
   
   blogService : BlogService;
   constructor( private cookservice: CookieService ) { }
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
   logout(): void {
     this.cookservice.set("name", "false");
   }
-  
+
   getLoggedInStatus(): boolean {
     if (!this.cookservice.check("name")) return false;
     if (this.cookservice.get("name")==="true") this.loginstatus=true;
