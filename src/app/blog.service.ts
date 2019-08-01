@@ -33,8 +33,4 @@ export class BlogService {
   public findAllBlogPostsDesc(): Observable<Post[]> {
     return this.http.get<Post[]>(this.bloggeturl + "/reverse");
   }
-
-  public findSummary(id : number): Observable<string> {
-    return this.http.get<string>(this.postgeturl + `${id}/summary`);
-  }
 }

@@ -15,21 +15,26 @@
 
 <input [(ngModel)] = "search" >
 <div class="container-fluid" style="text-align:left">
-      <a *ngFor="let post of posts | filter : search" routerLink="/post/{{post.id}}">
+      <div *ngFor="let post of posts | filter : search" >
       
         <div class="card" style="width: 40rem; margin:0 auto;">
-            <div class="card-header"><span class="alignleft">{{post.title}}</span><span class="alignright">user: {{post.userId}}</span></div>
+            <div class="card-header">
+              <a routerLink="/post/{{post.id}}">
+              <span class="alignleft">{{post.title}}</span>
+              </a>
+              <span class="alignright">user: {{post.userId}}</span>
+            </div>
           <div class="module blog">
             <img class="card-img-top" src="{{post.imageURL || 'https://www.tigers-world.com/wp-content/uploads/Siberian_tiger-1.jpg' }}"  alt="post image">
-            <!-- <div class="card-body">
-              <p class="card-text"></p>
-            </div> -->
+            <div class="card-body" >
+              {{getBlogSummary(post)}}<a style="color: gray;" routerLink="/post/{{post.id}}">...read more</a>
+            </div>
              <div class="card-footer text-muted">2 days ago</div>
           </div>
    
       </div>
       <br>
-    </a>
+    </div>
     </div>
 
 
