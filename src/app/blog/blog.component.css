@@ -9,3 +9,21 @@ h5 {
     padding-top: 1%;
     text-align: center;
 }
+
+.card-body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-header {
+    font-family: 'Montserrat', sans-serif;
+    display: inline;
+}
+
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}

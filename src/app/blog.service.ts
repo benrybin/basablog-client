@@ -11,7 +11,7 @@ export class BlogService {
   private blogposturl = environment.apiUrl + "blogPost/add";
   private bloggeturl =  environment.apiUrl + "blogPost/all";
   private postgeturl = environment.apiUrl + "blogPost/";
-
+  
   constructor(private http:HttpClient) {}
 
   public findAllBlogPost(): Observable<Post[]>{
@@ -32,5 +32,9 @@ export class BlogService {
 
   public findAllBlogPostsDesc(): Observable<Post[]> {
     return this.http.get<Post[]>(this.bloggeturl + "/reverse");
+  }
+
+  public findSummary(id : number): Observable<string> {
+    return this.http.get<string>(this.postgeturl + `${id}/summary`);
   }
 }
