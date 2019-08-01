@@ -21,10 +21,13 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
+  login(): void {
+    this.cookieService.set("name", "true");
+  }
+
   onSubmit() {
-    this.cookieService.set("name","test2");
+    this.login();
     console.log(this.cookieService.get("name"))
-    
     return this.userService.verifyUser(this.user).forEach(result => this.verify());
 
   }
