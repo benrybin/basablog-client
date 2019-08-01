@@ -13,7 +13,7 @@ import {FormsModule} from '@angular/forms';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AddcommentComponent } from './addcomment/addcomment.component';
 import { FilterPipe } from './filter.pipe';
-
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { FilterPipe } from './filter.pipe';
     provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
     multi: true
-  }],
+  },CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
