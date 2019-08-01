@@ -14,17 +14,18 @@
 
 </div>
 <br>
+<div class="container-fluid" style="text-align:left">
+<div class="card text-left"style="width: 40rem; margin:0 auto;">
     <div *ngFor="let comment of comments">
-      <div class="card text-left"style="width: 40rem; margin:0 auto;">
-            <div class="module comment">
+        <div class="card" style="width: 40rem; margin:0 auto;">
               <div class="card-header text-muted">User: {{comment.userid}}</div>
               <div class="card-body">
                 {{comment.body}}
               </div>
             </div>
-       
         </div>
     </div>
 <br>
+</div>
 
 <app-addcomment post="post"></app-addcomment>
