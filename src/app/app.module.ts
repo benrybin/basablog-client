@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddblogComponent } from './addblog/addblog.component';
@@ -13,7 +12,8 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AddcommentComponent } from './addcomment/addcomment.component';
-
+import { FilterPipe } from './filter.pipe';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { AddcommentComponent } from './addcomment/addcomment.component';
     BlogComponent,
     CommentComponent,
     AdduserComponent,
-    AddcommentComponent
+    AddcommentComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,7 @@ import { AddcommentComponent } from './addcomment/addcomment.component';
     provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
     multi: true
-  }],
+  },CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
