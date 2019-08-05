@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Post } from '../post';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute } from '@angular/router';
 import { BlogService } from '../blog.service';
 import { CommentService } from '../comment.service';
 import { Comment } from '../comment';
-import { AppComponent } from '../app.component';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-blog',
@@ -22,7 +22,7 @@ export class BlogComponent implements OnInit {
     private route: ActivatedRoute,
     private blogService: BlogService,
     private commentService: CommentService,
-    private appComponent : AppComponent
+    private location : Location
   ) {}
   
   ngOnInit() {
@@ -41,8 +41,13 @@ export class BlogComponent implements OnInit {
     this.commentService.findAll(postid).subscribe(comments => this.comments = comments);
   }
 
-  onSubmit(): void {
-    
+  deletePost(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.blogService.deleteBlogPost(id).subscribe(text => console.log(text));
+    this.blogService.findAllBlogPostsDesc();
+    this.location.back();
   }
+
+
 }
 
