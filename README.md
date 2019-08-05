@@ -1,5 +1,5 @@
-ZipShare 
-basablog.herokuapp.com  
+ZipShare  
+basablog.herokuapp.com   
 Blog Application
 
 Objective - to create an implementation of a small web service
