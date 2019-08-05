@@ -7,8 +7,11 @@ h1 {
 
 a {
     text-decoration-color: black;
-    color: black;
+    color: navy;
     text-decoration-line: none;
+}
+.btn{
+    background: #87CEEB;
 }
 
 

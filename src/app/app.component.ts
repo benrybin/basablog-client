@@ -39,6 +39,6 @@ export class AppComponent implements OnInit {
   }
 
   goHome() : void {
-    this.blogService.findAllBlogPostsDesc;
+    this.blogService.findAllBlogPostsDesc();
   }
 }

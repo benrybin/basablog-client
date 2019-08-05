@@ -4,6 +4,7 @@ a {
     text-decoration: none;
 }
 .card-header {
+    padding: auto;
     font-family: 'Montserrat', sans-serif; 
 }
 
@@ -16,4 +17,16 @@ a {
 
 .alignright {
     float: right;
+}
+.btn {
+    outline-color: aqua;
+    background-color: #87CEEB;
+}
+.card {
+    padding: auto;
+}
+
+input {
+
+    padding: 1%;
 }
