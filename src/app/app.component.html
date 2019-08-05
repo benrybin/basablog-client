@@ -24,7 +24,7 @@
     </div>
       <div>
           <span class="btn-group" >
-            <button *ngIf="!getLoggedInStatus()" class="btn btn-danger" type="button" routerLink='user'>Login</button>
+            <button *ngIf="!getLoggedInStatus()" class="btn btn-info" type="button" routerLink='user'>Login</button>
             <button *ngIf="getLoggedInStatus()" (click)="logout()" class="btn btn-danger" type="button" routerLink='app'>Logout</button>
           </span>
           </div>
